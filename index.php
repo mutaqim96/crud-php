@@ -32,8 +32,26 @@ $mysqli = new mysqli("localhost","root","abc123","football");
 
 <br>
 <br>
-
-
+<table>
+<thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Country</th>
+      <th>Age</th>
+    </tr>
+</thead>
+<tbody>
+<?php
+while($row = $result->fetch_assoc())
+{?>
+    <tr>
+      <td><?= $row['username']; ?></td>
+      <td><?= $row['country'];?></td>
+      <td><?= $row['age']; ?></td>
+    </tr>
+<?php }?>
+</tbody>
+</table>
   
 </body>
 </html>
