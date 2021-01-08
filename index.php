@@ -52,6 +52,31 @@ while($row = $result->fetch_assoc())
 <?php }?>
 </tbody>
 </table>
-  
+  <br><br>
+
+<?php
+$sql = "SELECT * FROM manager";
+$result = $mysqli->query($sql);
+?>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Manager Name</th>
+      <th>Country</th>
+      <th>Age</th>
+    </tr>
+    </thead>
+    <?php while($row= $result->fetch_assoc()){?>
+      <tbody>
+        <tr>
+          <td><?= $row['username'];?></td>
+          <td><?= $row['country'];?></td>
+          <td><?= $row['age'];?></td>
+        </tr>
+      </tbody>
+
+    <?php };?>
+  </table>
 </body>
 </html>
